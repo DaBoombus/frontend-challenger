@@ -1,0 +1,19 @@
+{
+  "name": "frontend-code-challenge",
+  "version": "1.0.0",
+  "description": "Payment rails frontend code challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/payment-rails/front-end-code-challenge.git"
+  },
+  "author": "Payment Rails <dev@paymentrails.com>",
+  "license": "Payment Rails",
+  "bugs": {
+    "url": "https://gitlab.com/payment-rails/front-end-code-challenge/issues"
+  },
+  "homepage": "https://gitlab.com/payment-rails/front-end-code-challenge#README"
+}
