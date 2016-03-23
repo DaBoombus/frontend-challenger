@@ -6,7 +6,7 @@
  
  In this repo you'll find a basic node js app. 
  
- It serves staticly the frontend app in `./www` on `localhost:5000/`
+ It serves the frontend app in `./www` on `localhost:5000/`
   
  It serves also 2 endpoints returning json
  
@@ -35,13 +35,15 @@
     - Get the data from the api in the angular app    
     - Create a list of recipients from the data 
     - Create a recipient details page
-    - Any ideas you have to make a cool recipient list 
+    - Any ideas you have...
      
-  You may use any third party lib for js, styles, ...
+  You may use any third party lib for js, styles, tests...
 
 ## Submit
 
- Clone this repository and do your code on your local machine.
+ Fork this repository.
+ 
+ Code.
  
  Tell us about your code in the README.md file:
  
@@ -53,8 +55,8 @@
     - What do you think about the challenge we presented you
  
     
- When you are ready to submit push your changes to a branch named after you.
-    
+ When you are ready to submit do a pull request on [this repository](https://github.com/PaymentRails/frontend-challenger).
+  
  If you have any question contact Julien Prugne <julien.prugne@paymentrails.com>
     
  Thanks and good luck.
