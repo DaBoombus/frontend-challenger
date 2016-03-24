@@ -24,6 +24,28 @@
         - Node 5.X
         - Express 4.X     
  
+## Dependencies
+
+ - Node js [4 or 5](https://nodejs.org/en/)
+ 
+ - Bower 
+    npm install --global bower
+    
+
+## Build and Run
+ 
+  * Build :
+    
+    npm install
+    bower install
+    
+  * Run :
+  
+    node index.js
+  
+  * See :
+    
+    http://localhost:3000/
  
 ## To Do
 
