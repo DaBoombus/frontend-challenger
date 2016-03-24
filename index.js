@@ -122,14 +122,13 @@ server.get("/api/recipients/:id", (request, response) => {
   response.status(200).json(
     recipients.records.reduce(
       (carry, recipient) => {
-        if(recipient.id == request.params.id) {
+        if (recipient.id == request.params.id) {
           carry = recipient;
         }
         return carry;
       },
       {}
-    )
-  );
+    ))
 });
 
 server.get("/api/recipients", (request, response) => {
@@ -138,4 +137,4 @@ server.get("/api/recipients", (request, response) => {
 
 server.use(express.static("www"));
 
-server.listen(5000);
+server.listen(3000);
