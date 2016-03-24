@@ -3,6 +3,16 @@
     Welcome to payment rails recipient display. Click on the button below to see the list of your recipients.
 </p>
 <!-- Implement -->
-<button>
+<table>
+    <tr>
+        <th>id</th>
+        <th>email</th>
+    </tr>
+    <tr ng-repeat="recipient in recipients">
+        <td>{{recipient.id}}</td>
+        <td>{{recipient.email}}</td>
+    </tr>
+</table>
+<button ng-click="alert()">
     See recipients
 </button>

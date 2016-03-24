@@ -6,9 +6,27 @@
 
 let service = () => {
   return {
-    // implement
+    
+    getRecipients : function(http, q){
+        alert("hello world");
+        var deffered = q.defer();
+        http({method: 'GET',
+                url: "/api/recipients"}).then(
+                    function successCallback(response){
+                        //alert(response.data);
+                        deffered.resolve(response.data.records);
+                    },
+                    function errorCallback(respone){
+                        alert(response);
+                        return "error";
+                    }
+                )
+        return deffered.promise;
+    }
+    
+    
   };
 };
 
 angular.module("PaymentRails")
-  .service("Recipients", service);
+  .factory("Recipients", service);

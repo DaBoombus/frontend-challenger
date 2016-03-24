@@ -10,8 +10,8 @@
   
  It serves also 2 endpoints returning json
  
-    - [GET] `/api/recipients`  => list of recipients
-    - [GET] `/api/recipients/:id` => Single recipient by id 
+    - [GET] `/api/recipients`  => list of recipients *use for index page
+    - [GET] `/api/recipients/:id` => Single recipient by id *use for recipient page
  
  Included libraries:
  
