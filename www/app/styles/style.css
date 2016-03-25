@@ -1,0 +1,27 @@
+.tableElement{
+     margin:0px;
+    padding:5px;
+
+}
+
+table{
+
+}
+
+th{
+    background-color: black;
+    color:white;
+}
+
+tr:nth-child(even){
+    background-color: lightgray;
+}
+tr:nth-child(odd){
+    background-color: gray;
+}
+
+tr:hover{
+    color:white;
+    background-color: black;
+    cursor: pointer;
+}

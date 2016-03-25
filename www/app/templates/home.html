@@ -1,16 +1,16 @@
-<h1>Payment Rails</h1>
+
 <p>
     Welcome to payment rails recipient display. Click on the button below to see the list of your recipients.
 </p>
 <!-- Implement -->
-<table>
-    <tr>
-        <th>id</th>
-        <th>email</th>
+<table cellspacing=0 cellpadding=0 class="tableElement">
+    <tr class="tableElement">
+        <th class="tableElement">id</th>
+        <th class="tableElement">email</th>
     </tr>
-    <tr ng-repeat="recipient in recipients">
-        <td>{{recipient.id}}</td>
-        <td>{{recipient.email}}</td>
+    <tr ng-repeat="recipient in recipients" ng-click="recipientDetails($index)" class="tableElement">
+        <td  class="tableElement">{{recipient.id}}</td>
+        <td  class="tableElement">{{recipient.email}}</td>
     </tr>
 </table>
 <button ng-click="alert()">

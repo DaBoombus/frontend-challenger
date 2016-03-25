@@ -1,5 +1,5 @@
 "use strict";
-let controller = function(sc, http, q,  rs){
+let controller = function(sc, http, q, location,  rs){
 
     sc.recipients = [];
     
@@ -11,9 +11,19 @@ let controller = function(sc, http, q,  rs){
            }
        );
        
+       sc.goToRecipientDetails
        //sc.$apply();
    }
+   
+   sc.recipientDetails = function(userIndex){
+       sc.user = sc.recipients[userIndex];
+       location.url('/user');
+   }
+   
+   sc.goBack = function(){
+       location.url('/home');
+   }
 };
-controller.$inject = ['$scope','$http', '$q', 'Recipients'];
+controller.$inject = ['$scope','$http', '$q', '$location', 'Recipients'];
 angular.module("PaymentRails")
   .controller("recipientsController", controller);

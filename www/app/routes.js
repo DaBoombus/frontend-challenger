@@ -12,5 +12,14 @@ angular.module("PaymentRails")
             templateUrl: "app/templates/home.html"
           }
         );
+        
+        $stateProvider
+        .state(
+          "user",
+          {
+            url: "/user",
+            templateUrl: "app/templates/user.html"
+          }
+        );
     }
   );
