@@ -6,17 +6,17 @@
     <div ng-repeat="(key, val) in recipient">
         <div class="key"> {{key}}: </div>
         <div class="value" ng-if="isString(val)" >{{val}}</div>
-        <div class="value" ng-if="val == null">-UNSET-</div>
+        <div class="value" ng-if="val == null">Not Set</div>
         <div ng-if="!isString(val)">
             <div ng-repeat="(key2, listVal) in val">
                 <div class="subKey">{{key2}}:</div>
                 <div ng-if="isString(listVal)" class="subValue">{{listVal}}</div>
-                <div class="subValue" ng-if="listVal == null">-UNSET-</div>
+                <div class="subValue" ng-if="listVal == null">Not Set</div>
                 <div ng-if="!isString(listVal)">
                     <div ng-repeat="(key3, listVal2) in listVal">
                           <div class="subsubKey">{{key3}}:</div>
                           <div class="subsubValue">{{listVal2}}</div>
-                          <div class="subsubValue" ng-if="listVal2 == null">-UNSET-</div>
+                          <div class="subsubValue" ng-if="listVal2 == null">Not Set</div>
                     </div>
                 </div>
             </div>
