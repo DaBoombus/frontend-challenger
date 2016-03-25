@@ -6,12 +6,15 @@
 let controller = function(sc, http, q, location,  rs){
 
     sc.recipients = [];
-    
+    /**
+     * This method gets all recipients from the front end and assigs them
+     * to $scope.recipients by using the Recipients service
+     */
     sc.getRecipients = function(){
        rs.getRecipients(http, q).then(
            function(recipients){
-               sc.recipients = recipients
-               //console.info(sc.recipients.length);
+               sc.recipients = recipients;
+               console.info(sc.recipients.length + " recipients found");
            }
        );
        
@@ -19,15 +22,29 @@ let controller = function(sc, http, q, location,  rs){
        //sc.$apply();
    }
    
+   /**
+    * This function redirects to recipient details page and selects a recipient to "focus"
+    * in order to render the recipients page
+    */
    sc.recipientDetails = function(recIndex){
        sc.recipient = sc.recipients[recIndex];
        location.url('/recipient');
    }
-   
+   /**
+    * This is a utility function used to help render the recipient details page
+    */
    sc.isString = function(obj){
        return (typeof obj) == "string";
    }
    
+   sc.makePretty(str){
+       str = str.replace(/([A-Z])/g, ' $1').trim();
+
+   }
+   
+   /**
+    * This function is used to redirect from the recipient details page to the home page
+    */
    sc.goBack = function(){
        location.url('/home');
    }
