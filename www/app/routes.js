@@ -15,10 +15,10 @@ angular.module("PaymentRails")
         
         $stateProvider
         .state(
-          "user",
+          "recipient",
           {
-            url: "/user",
-            templateUrl: "app/templates/user.html"
+            url: "/recipient",
+            templateUrl: "app/templates/recipient.html"
           }
         );
     }

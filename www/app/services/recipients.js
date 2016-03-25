@@ -1,8 +1,5 @@
 "use strict";
-/**
- * Todo: implement
- * recipients endpoint url: /api/recipients
- */
+
 /**
  * This service fetches all recipients from the node js server using ajax and returns them 
  * once they have been recieved

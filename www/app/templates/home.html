@@ -5,14 +5,28 @@
 <!-- Implement -->
 <table cellspacing=0 cellpadding=0 class="tableElement">
     <tr class="tableElement">
-        <th class="tableElement">id</th>
-        <th class="tableElement">email</th>
+        <th class="tableElement">Id</th>
+        <th class="tableElement">Email</th>
+        <th class="tableElement">Creation date</th>
+        <th class="tableElement">updatedAt</th>
+        <th class="tableElement">Language</th>
+        <th class="tableElement">Status</th>
+        <th class="tableElement">Time Zone</th>
+        <th class="tableElement">Type</th>
+        
     </tr>
     <tr ng-repeat="recipient in recipients" ng-click="recipientDetails($index)" class="tableElement">
         <td  class="tableElement">{{recipient.id}}</td>
         <td  class="tableElement">{{recipient.email}}</td>
+        <td  class="tableElement">{{recipient.creationDate}}</td>
+        <td  class="tableElement">{{recipient.updatedAt}}</td>
+        <td  class="tableElement">{{recipient.language}}</td>
+        <td  class="tableElement">{{recipient.status}}</td>
+        <td  class="tableElement">{{recipient.timeZone}}</td>
+        <td  class="tableElement">{{recipient.type}}</td>
+        
     </tr>
 </table>
-<button ng-click="alert()">
+<button ng-click="getRecipients()">
     See recipients
 </button>

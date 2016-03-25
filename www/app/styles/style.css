@@ -1,11 +1,37 @@
 .tableElement{
      margin:0px;
     padding:5px;
+    text-align: left;
+}
 
+.key{
+    font-weight: bold;
+}
+
+.value{
+    text-indent: 25px;
+}
+
+.subKey{
+    font-weight: bold;
+    text-indent: 25px;
+}
+.subValue{
+    text-indent: 50px;
+}
+
+.subsubKey{
+    font-weight: bold;
+    text-indent: 50px;
+}
+.subsubValue{
+    text-indent: 75px;
 }
 
 table{
-
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 th{

@@ -1,13 +1,17 @@
 "use strict";
+/**
+ * This controller acts as a global controller for the application and allows
+ * to fetch all recipients aswell as view their details
+ */
 let controller = function(sc, http, q, location,  rs){
 
     sc.recipients = [];
     
-    sc.alert = function(){
+    sc.getRecipients = function(){
        rs.getRecipients(http, q).then(
            function(recipients){
                sc.recipients = recipients
-               alert(sc.recipients);
+               //console.info(sc.recipients.length);
            }
        );
        
@@ -15,9 +19,13 @@ let controller = function(sc, http, q, location,  rs){
        //sc.$apply();
    }
    
-   sc.recipientDetails = function(userIndex){
-       sc.user = sc.recipients[userIndex];
-       location.url('/user');
+   sc.recipientDetails = function(recIndex){
+       sc.recipient = sc.recipients[recIndex];
+       location.url('/recipient');
+   }
+   
+   sc.isString = function(obj){
+       return (typeof obj) == "string";
    }
    
    sc.goBack = function(){
