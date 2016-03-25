@@ -3,7 +3,7 @@
     Welcome to payment rails recipient display. Click on the button below to see the list of your recipients.
 </p>
 <!-- Implement -->
-<table cellspacing=0 cellpadding=0 class="tableElement">
+<table cellspacing=0 cellpadding=0 class="tableElement" allign="center">
     <tr class="tableElement">
         <th class="tableElement">Id</th>
         <th class="tableElement">Email</th>
@@ -18,7 +18,7 @@
     <tr ng-repeat="recipient in recipients" ng-click="recipientDetails($index)" class="tableElement">
         <td  class="tableElement">{{recipient.id}}</td>
         <td  class="tableElement">{{recipient.email}}</td>
-        <td  class="tableElement">{{recipient.creationDate}}</td>
+        <td  class="tableElement">{{recipient.createdAt}}</td>
         <td  class="tableElement">{{recipient.updatedAt}}</td>
         <td  class="tableElement">{{recipient.language}}</td>
         <td  class="tableElement">{{recipient.status}}</td>

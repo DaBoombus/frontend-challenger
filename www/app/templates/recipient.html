@@ -3,26 +3,64 @@
     Go Back <<
 </button>
 <p>
-    <div ng-repeat="(key, val) in recipient">
-        <div class="key"> {{key}}: </div>
-        <div class="value" ng-if="isString(val)" >{{val}}</div>
-        <div class="value" ng-if="val == null">Not Set</div>
-        <div ng-if="!isString(val)">
-            <div ng-repeat="(key2, listVal) in val">
-                <div class="subKey">{{key2}}:</div>
-                <div ng-if="isString(listVal)" class="subValue">{{listVal}}</div>
-                <div class="subValue" ng-if="listVal == null">Not Set</div>
-                <div ng-if="!isString(listVal)">
-                    <div ng-repeat="(key3, listVal2) in listVal">
-                          <div class="subsubKey">{{key3}}:</div>
-                          <div class="subsubValue">{{listVal2}}</div>
-                          <div class="subsubValue" ng-if="listVal2 == null">Not Set</div>
+    
+    <div class="recipient" ng-if="recipient">
+    <img id="recPic" src="{{recipient.gravatarUrl}}"/>
+        <div id="genInfo">
+            <div>Email: {{recipient.email}}</div>
+            <div>Name: {{recipient.name}}</div>
+            <div>Type: {{recipient.type}}</div>
+            <div>Status: {{recipient.status}}</div>
+            <div>Time Zone: {{recipient.timeZone}}</div>
+            <div>Language: {{recipient.language}}</div>
+            <div>Updated At: {{recipient.updatedAt}}</div>
+            <div>Created At: {{recipient.createdAt}}</div>
+            <div>ID: {{recipient.id}}</div>
+        </div>
+        <div id="detInfo">
+            <div class ="key">Payout Account</div>
+                <div class="value">Type: {{recipient.payoutAccount.type}}</div>
+                <div class="value">Payout Email: {{recipient.payoutAccount.email}}</div>
+            <div class="key">Compliance</div>
+                <div class="value">Status: {{recipient.compliance.status}}</div>
+                <div class="value">Checked at: {{recipient.compliance.checkedAt}}</div>
+            <div class="key">Address</div>
+                <div class="value">Street 1: {{recipient.address.street1}}</div>
+                <div class="value">Street 2: {{recipient.address.street2}}</div>
+                <div class="value">City: {{recipient.address.city}}</div>
+                <div class="value">Postal Code: {{recipient.address.postalCode}}</div>
+                <div class="value">Phone: {{recipient.address.phone}}</div>
+                <div class="value">Country: {{recipient.address.country}}</div>
+                <div class="value">Region: {{recipient.address.region}}</div>
+            <div class="key">Balances</div>
+                <div class="subKey">-USD</div>
+                    <div ng-if="recipient.balances.USD.primary" class="subValue">Primary</div>
+                    <div class="subValue">Amount: {{recipient.balances.USD.amount}}</div>
+                    <div class="subValue">Pending: {{recipient.balances.USD.pending}}</div>
+        </div>
+        <button ng-click="goBack()">
+        Go Back <<
+        </button>
+        <!--Loop that builds a rough details page-->
+        <!--<div ng-repeat="(key, val) in recipient">
+            <div class="key"> {{key}}: </div>
+            <div class="value" ng-if="isString(val)" >{{val}}</div>
+            <div class="value" ng-if="val == null">Not Set</div>
+            <div ng-if="!isString(val)">
+                <div ng-repeat="(key2, listVal) in val">
+                    <div class="subKey">{{key2}}:</div>
+                    <div ng-if="isString(listVal)" class="subValue">{{listVal}}</div>
+                    <div class="subValue" ng-if="listVal == null">Not Set</div>
+                    <div ng-if="!isString(listVal)">
+                        <div ng-repeat="(key3, listVal2) in listVal">
+                            <div class="subsubKey">{{key3}}:</div>
+                            <div class="subsubValue">{{listVal2}}</div>
+                            <div class="subsubValue" ng-if="listVal2 == null">Not Set</div>
+                        </div>
                     </div>
                 </div>
             </div>
-       </div>
-    </div>
-    <button ng-click="goBack()">
-        Go Back <<
-    </button>
+        </div>-->
+    </div>  
+    
 </p>

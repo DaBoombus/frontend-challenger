@@ -3,7 +3,36 @@
     padding:5px;
     text-align: left;
 }
-
+#header{
+    background-color: #1e8cff;
+    color:white;
+    margin:0px;
+    padding: 5%;
+    padding-left: 1%;
+    
+}
+#body{
+    padding:2%;
+    padding-left:5%;
+}
+#genInfo{
+    padding: 1%;
+    padding-top:0px;
+    width:50%;
+    float:left;
+}
+#recPic{
+    float:left;
+    width:10%;
+    height:auto;
+}
+#detInfo{
+    padding: 1%;
+    clear:both;
+}
+.recipient{
+    padding: 1%;
+}
 .key{
     font-weight: bold;
 }
@@ -30,8 +59,7 @@
 
 table{
     width:90%;
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 
 th{
@@ -48,6 +76,17 @@ tr:nth-child(odd){
 
 tr:hover{
     color:white;
-    background-color: black;
+    background-color: #1a1a1a;
+    cursor: pointer;
+}
+
+button{
+    border: 0px;
+    background-color: #1e8cff;
+    color: white;
+    padding: 10px;
+}
+button:hover{
+    background-color: #1e8cbe;
     cursor: pointer;
 }

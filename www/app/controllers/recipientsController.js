@@ -36,12 +36,7 @@ let controller = function(sc, http, q, location,  rs){
    sc.isString = function(obj){
        return (typeof obj) == "string";
    }
-   
-   sc.makePretty(str){
-       str = str.replace(/([A-Z])/g, ' $1').trim();
 
-   }
-   
    /**
     * This function is used to redirect from the recipient details page to the home page
     */
