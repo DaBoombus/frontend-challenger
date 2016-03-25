@@ -19,7 +19,6 @@ let controller = function(sc, http, q, location,  rs){
        );
        
        sc.goToRecipientDetails
-       //sc.$apply();
    }
    
    /**
@@ -28,6 +27,7 @@ let controller = function(sc, http, q, location,  rs){
     */
    sc.recipientDetails = function(recIndex){
        sc.recipient = sc.recipients[recIndex];
+       console.info("Recipient Selected ID: " + sc.recipient.id);
        location.url('/recipient');
    }
    /**
@@ -44,6 +44,12 @@ let controller = function(sc, http, q, location,  rs){
        location.url('/home');
    }
 };
+/**
+ * $scope: used for scope varriables across the app 
+ * $http: used for the AJAX request
+ * $q: used to asyncronously return from the recipients service 
+ * $location: used to navigate to the recipient page 
+ */
 controller.$inject = ['$scope','$http', '$q', '$location', 'Recipients'];
 angular.module("PaymentRails")
   .controller("recipientsController", controller);

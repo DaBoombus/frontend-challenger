@@ -1,66 +1,40 @@
-# Payment Rails Front end code challenge
+EXPLANATION:
+    My solution works by fetching all the recipients from the backend API through an ajax request using the Angular JS $http object. The
+    method that does this is located in the recipients service, I decided to change from using the .service() function to register the service
+    over to the .factory() as I found that a constructor was less fit than an object containing a single function to be called in order to achieve this
+    functionality.
 
-## Context
+    This service is called from inside the recipientController which turned into a sort of global controller for the entire application as it is also used 
+    the recipient details page. Inside this controller there are all the action method used. This includes an action for changing pages to recipient and
+    back to home as well as all the functions that assign different $scope level variables to be used across the different pages.
 
- Hi and welcome to this code challenge. We created in order to test your frontend abilities.
- 
- In this repo you'll find a basic node js app. 
- 
- It serves the frontend app in `./www` on `localhost:5000/`
-  
- It serves also 2 endpoints returning json
- 
-    - [GET] `/api/recipients`  => list of recipients *use for index page
-    - [GET] `/api/recipients/:id` => Single recipient by id *use for recipient page
- 
- Included libraries:
- 
-    Frontend:
-        - Angular
-        - Angular UI router
-        - Material light form getmdl.io
-        
-    Backend:    
-        - Node 5.X
-        - Express 4.X     
- 
-## Dependencies
+    After some experimentation I realized that I could get the data for the recipients from the home page by storing it in $scope thus not needing
+    to make another call to the API when I change pages. On the recipient details page I commented out a block of code that I used to automatically loop
+    through the recipient object and populate the page. I replaced it with a more esthetically pleasing approach that also gets the icon from the Gravatar URL
+    after realizing that it pointed to an image.
 
- - Node js [4 or 5](https://nodejs.org/en/)
- 
- - Bower 
-    npm install --global bower
-    
+    I am not sure if my approach to passing the data to the recipient page is the best as I am still very new to Angular (this is the first time I use it)
+    but the approach I use appears to do everything through AJAX which gives it a nice seamless feel.
 
-## Build and Run
- 
-  * Build :
-    
-    npm install
-    
-    bower install
-    
-  * Run :
-  
-    node index.js
-  
-  * See :
-    
-    http://localhost:3000/
- 
-## To Do
+    I also moved the h1 tag into the index.html file in order to have it apply across both pages as a banner for the application. For the presentation/styling
+    I decided to go for a simplistic look using vibrant colors as well as using CSS functions like hover to make it feel more responsive. I decided not to use any
+    additional libraries for this project as I wanted to focus on learning angular.
 
- You need to update the files in the `./www` folder.
- 
-  The result we are looking for:
-  
-    - A bit of styling on the home page
-    - Get the data from the api in the angular app    
-    - Create a list of recipients from the data 
-    - Create a recipient details page
-    - Any ideas you have...
-     
-  You may use any third party lib for js, styles, tests...
+    Most difficulties I had came from not knowing exactly what I was doing however with google at my side I found that angular JS was very user friendly especially
+    compared to native JS. I also had a problem with node where it required me to install the express package which was fixed with the NPM INSTALL EXPRESS commade.
+    The more comfortable I get with it the more I like it, it makes things like AJAX and sharing data between pages which are usually tedious
+    quick and painless. I also had a bit of trouble wrapping my head around the promise functionality and returning data that was fetched asynchronously, but I am rather
+    pleased with the result I got. Overall I think the project took me around 10 or 12 hours with a bit of extra time reading about angular between classes and on the bus.
+
+    I found this challenge to be a very enriching experience I am not sure how difficult it would be for someone who is adept at using angular however as a rookie
+    to the framework I found it was a good way to get an overview of the many different mechanisms that comprise the framework. Coming from the perspective of a 
+    student where most projects are started from scratch I found it interesting to work within code that had already been written and analyzing it in order to come
+    up with the solution.
+
+
+
+
+
 
 ## Submit
 

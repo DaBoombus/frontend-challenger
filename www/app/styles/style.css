@@ -66,6 +66,9 @@ th{
     background-color: black;
     color:white;
 }
+th:hover{
+    cursor:initial;
+}
 
 tr:nth-child(even){
     background-color: lightgray;

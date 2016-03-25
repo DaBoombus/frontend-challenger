@@ -15,6 +15,7 @@
         <th class="tableElement">Type</th>
         
     </tr>
+    <!-- Loops through all recipients contained in $scope -->
     <tr ng-repeat="recipient in recipients" ng-click="recipientDetails($index)" class="tableElement">
         <td  class="tableElement">{{recipient.id}}</td>
         <td  class="tableElement">{{recipient.email}}</td>

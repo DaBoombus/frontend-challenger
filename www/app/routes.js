@@ -13,6 +13,7 @@ angular.module("PaymentRails")
           }
         );
         
+        // route used for recipient page
         $stateProvider
         .state(
           "recipient",
