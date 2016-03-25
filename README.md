@@ -18,7 +18,8 @@ EXPLANATION:
 
     I also moved the h1 tag into the index.html file in order to have it apply across both pages as a banner for the application. For the presentation/styling
     I decided to go for a simplistic look using vibrant colors as well as using CSS functions like hover to make it feel more responsive. I decided not to use any
-    additional libraries for this project as I wanted to focus on learning angular.
+    additional libraries for this project as I wanted to focus on learning angular. More information about the functionality of my project can be found as comments
+    above methods in the recipient.js and recipientController.js.
 
     Most difficulties I had came from not knowing exactly what I was doing however with google at my side I found that angular JS was very user friendly especially
     compared to native JS. I also had a problem with node where it required me to install the express package which was fixed with the NPM INSTALL EXPRESS commade.
